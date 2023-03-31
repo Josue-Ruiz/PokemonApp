@@ -4,13 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
-import androidx.lifecycle.lifecycleScope
+import com.example.josue.pokeapp.R
 import com.example.josue.pokeapp.core.PicassoUtil
 import com.example.josue.pokeapp.databinding.ActivityMainBinding
 import com.example.josue.pokeapp.ui.dialogs.FoundPokemon
 import com.example.josue.pokeapp.ui.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -33,23 +32,32 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get()
 
         viewModel.pokemon.observe(this) {
-            binding.tvPkemonId.text = "# ${it.id}"
-            binding.tvPkemonWeight.text = "${it.weight}"
-            binding.tvPkemonName.text = "${it.name}"
+            val id = getString(R.string.id_pokemon,it.id)
+            val weight = getString(R.string.weight_pokemon,it.weight)
+            binding.tvPkemonId.text = id
+            binding.tvPkemonWeight.text = weight
+            binding.tvPkemonName.text = it.name
             picassoloader.loadImage(it.urlImage, binding.ivPokemon)
         }
 
         viewModel.dialogState.observe(this) {
-            if (it) {
-                dialog.show(supportFragmentManager, "New Pokemon")
-                return@observe
-            }
-            dialog.dismiss()
+                showDialog(it)
         }
 
         binding.button.setOnClickListener {
             viewModel.getRandomPokemon()
         }
+    }
+
+    private fun showDialog(state : Boolean){
+        if (state) {
+            if (!dialog.isAdded){
+                dialog.show(supportFragmentManager, "New Pokemon")
+                return
+            }
+            return
+        }
+        dialog.dismiss()
     }
 
 }
