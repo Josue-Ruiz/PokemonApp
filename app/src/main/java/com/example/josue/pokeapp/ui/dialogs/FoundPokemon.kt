@@ -6,14 +6,10 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.example.josue.pokeapp.R
-import com.example.josue.pokeapp.databinding.DialogFoundPokemonBinding
 
-class FoundPokemon() : DialogFragment() {
+class FoundPokemon : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
@@ -25,6 +21,7 @@ class FoundPokemon() : DialogFragment() {
         dialog.setCancelable(true)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window!!.setGravity(Gravity.CENTER)
+        dialog.setCanceledOnTouchOutside(false)
          return  dialog
     }
 }
