@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get()
 
-        viewModel.onCreate()
-
         viewModel.pokemon.observe(this) {
             binding.pkemon.text = "#${it.id} ${it.name} ${it.weight}"
             picassoloader.loadImage(it.urlImage, binding.ivPokemon)
