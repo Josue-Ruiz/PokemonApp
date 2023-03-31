@@ -33,5 +33,9 @@ class MainActivity : AppCompatActivity() {
             binding.pkemon.text = "#${it.id} ${it.name} ${it.weight}"
             picassoloader.loadImage(it.urlImage, binding.ivPokemon)
         }
+
+        binding.button.setOnClickListener {
+            viewModel.getRandomPokemon()
+        }
     }
 }

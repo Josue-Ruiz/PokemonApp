@@ -18,7 +18,14 @@ class MainViewModel @Inject constructor(private val getPokemonUseCase: GetPokemo
 
     fun onCreate(){
         viewModelScope.launch {
-            val result = getPokemonUseCase(25)
+            val result = getPokemonUseCase()
+            _pokemon.postValue(result)
+        }
+    }
+
+    fun getRandomPokemon(){
+        viewModelScope.launch {
+            val result = getPokemonUseCase()
             _pokemon.postValue(result)
         }
     }
