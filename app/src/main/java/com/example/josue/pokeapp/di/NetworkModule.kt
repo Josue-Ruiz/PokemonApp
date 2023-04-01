@@ -24,7 +24,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit( client: OkHttpClient): Retrofit {
+    fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -34,7 +34,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providePokeApi(retrofit: Retrofit):PokeApi{
+    fun providePokeApi(retrofit: Retrofit): PokeApi {
         return retrofit.create(PokeApi::class.java)
     }
 

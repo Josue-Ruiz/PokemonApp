@@ -7,17 +7,17 @@ data class ResponsePokeApi(
     @SerializedName("height") val height: Int,
     @SerializedName("weight") val weight: Int,
     @SerializedName("name") val name: String,
-    @SerializedName("sprites") val sprites: Sprites
+    @SerializedName("sprites") val sprites: Sprites,
 )
 
 data class Sprites(
-    @SerializedName("other") val other: Other
+    @SerializedName("other") val other: Other,
 )
 
 data class Other(
-    @SerializedName("official-artwork") val officialArtwork: OfficialArtwork
+    @SerializedName("official-artwork") val officialArtwork: OfficialArtwork,
 )
 
 data class OfficialArtwork(
-    @SerializedName("front_default") val front_default: String
+    @SerializedName("front_default") val front_default: String,
 )

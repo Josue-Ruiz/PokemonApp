@@ -10,7 +10,7 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 object PicassoModule {
     @Provides
-    fun providesPicasso(): Picasso{
+    fun providesPicasso(): Picasso {
         return Picasso.get()
     }
 }
