@@ -14,7 +14,7 @@ class FoundPokemon : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
         val builder = AlertDialog.Builder(context)
-        val view = layoutInflater.inflate(R.layout.dialog_found_pokemon,null)
+        val view = layoutInflater.inflate(R.layout.dialog_found_pokemon, null)
         builder.setView(view)
 
         val dialog = builder.create()
@@ -22,6 +22,6 @@ class FoundPokemon : DialogFragment() {
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window!!.setGravity(Gravity.CENTER)
         dialog.setCanceledOnTouchOutside(false)
-         return  dialog
+        return dialog
     }
 }

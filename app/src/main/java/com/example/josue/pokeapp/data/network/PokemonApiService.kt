@@ -8,11 +8,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class PokemonApiService @Inject constructor(private val api:PokeApi){
-    suspend fun getPokemonByID(id: Int): ResponsePokeApi{
-        return  withContext(Dispatchers.IO){
+class PokemonApiService @Inject constructor(private val api: PokeApi) {
+    suspend fun getPokemonByID(id: Int): ResponsePokeApi {
+        return withContext(Dispatchers.IO) {
             val response = api.getPokemonById(id)
-            response.body() ?: ResponsePokeApi(0,0,0,"", Sprites(Other(OfficialArtwork(""))))
+            response.body() ?: ResponsePokeApi(0, 0, 0, "", Sprites(Other(OfficialArtwork(""))))
         }
     }
 }

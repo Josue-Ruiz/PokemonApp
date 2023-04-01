@@ -5,5 +5,5 @@ data class Pokemondata(
     val name: String,
     val height: Int,
     val weight: Int,
-    val urlImage: String
+    val urlImage: String,
 )
