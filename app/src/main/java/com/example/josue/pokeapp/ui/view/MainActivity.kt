@@ -142,15 +142,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showDialog(state: Boolean) {
-        if (state) {
-            if (!dialog.isAdded) {
+        if (!dialog.isAdded) {
+            if (state) {
                 dialog.show(supportFragmentManager, "New Pokemon")
                 return
             }
-            return
-        }
+            dialog.dismiss()
+        }else{
 
-        if (dialog.isAdded) {
             dialog.dismiss()
         }
     }
