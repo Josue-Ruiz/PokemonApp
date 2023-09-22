@@ -14,8 +14,8 @@ import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.example.josue.pokeapp.R
+import com.example.josue.pokeapp.core.Extensions.setNameReplace
 import com.example.josue.pokeapp.core.PicassoUtil
-import com.example.josue.pokeapp.core.SetName
 import com.example.josue.pokeapp.databinding.ActivityMainBinding
 import com.example.josue.pokeapp.ui.dialogs.FoundPokemon
 import com.example.josue.pokeapp.ui.viewmodel.MainViewModel
@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         dialog = FoundPokemon()
 
-        val converter = SetName()
-
         viewModel = ViewModelProvider(this).get()
 
         viewModel.pokemon.observe(this) {
@@ -48,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             val weight = getString(R.string.weight_pokemon, it.weight)
             binding.tvPkemonId.text = id
             binding.tvPkemonWeight.text = weight
-            binding.tvPkemonName.text = converter.stringReplace(it.name)
+            binding.tvPkemonName.text = it.name.setNameReplace()
             picassoLoader.loadImage(it.urlImage, binding.ivPokemon)
         }
 
