@@ -33,9 +33,9 @@ class MainViewModel @Inject constructor(
     val dialogState: LiveData<Boolean> = _dialogState
 
     private val _latitude = MutableStateFlow(0.0)
-    val latitude: StateFlow<Double> = _latitude
+    private val latitude: StateFlow<Double> = _latitude
     private val _longitude = MutableStateFlow(0.0)
-    val longitude: StateFlow<Double> = _longitude
+    private val longitude: StateFlow<Double> = _longitude
 
     init {
         onCreate()
