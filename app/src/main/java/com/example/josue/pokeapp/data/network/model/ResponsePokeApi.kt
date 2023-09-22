@@ -19,5 +19,5 @@ data class Other(
 )
 
 data class OfficialArtwork(
-    @SerializedName("front_default") val front_default: String,
+    @SerializedName("front_default") val frontDefault: String,
 )

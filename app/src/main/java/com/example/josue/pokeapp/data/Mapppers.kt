@@ -8,5 +8,5 @@ fun ResponsePokeApi.toPokemonData(): Pokemondata = Pokemondata(
     name = name,
     height = height,
     weight = weight,
-    urlImage = sprites.other.officialArtwork.front_default
+    urlImage = sprites.other.officialArtwork.frontDefault
 )
