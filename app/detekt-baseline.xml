@@ -21,6 +21,5 @@
     <ID>NewLineAtEndOfFile:PokeApp.kt$com.example.josue.pokeapp.ui.PokeApp.kt</ID>
     <ID>NewLineAtEndOfFile:PokemonRepository.kt$com.example.josue.pokeapp.data.PokemonRepository.kt</ID>
     <ID>NewLineAtEndOfFile:VibrationUtility.kt$com.example.josue.pokeapp.core.VibrationUtility.kt</ID>
-    <ID>WildcardImport:LocationManagerLiveData.kt$import com.google.android.gms.location.*</ID>
   </CurrentIssues>
 </SmellBaseline>
