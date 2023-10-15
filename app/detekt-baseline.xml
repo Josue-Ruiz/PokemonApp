@@ -11,14 +11,11 @@
     <ID>NewLineAtEndOfFile:Extensions.kt$com.example.josue.pokeapp.core.Extensions.kt</ID>
     <ID>NewLineAtEndOfFile:GetPokemonUseCase.kt$com.example.josue.pokeapp.domain.GetPokemonUseCase.kt</ID>
     <ID>NewLineAtEndOfFile:LocationManagerLiveData.kt$com.example.josue.pokeapp.core.LocationManagerLiveData.kt</ID>
-    <ID>NewLineAtEndOfFile:MainActivity.kt$com.example.josue.pokeapp.ui.view.MainActivity.kt</ID>
-    <ID>NewLineAtEndOfFile:MainViewModel.kt$com.example.josue.pokeapp.ui.viewmodel.MainViewModel.kt</ID>
     <ID>NewLineAtEndOfFile:Mapppers.kt$com.example.josue.pokeapp.data.Mapppers.kt</ID>
     <ID>NewLineAtEndOfFile:NetworkModule.kt$com.example.josue.pokeapp.di.NetworkModule.kt</ID>
     <ID>NewLineAtEndOfFile:PicassoModule.kt$com.example.josue.pokeapp.di.PicassoModule.kt</ID>
     <ID>NewLineAtEndOfFile:PicassoUtil.kt$com.example.josue.pokeapp.core.PicassoUtil.kt</ID>
     <ID>NewLineAtEndOfFile:PokeApi.kt$com.example.josue.pokeapp.data.network.PokeApi.kt</ID>
-    <ID>NewLineAtEndOfFile:PokeApp.kt$com.example.josue.pokeapp.ui.PokeApp.kt</ID>
     <ID>NewLineAtEndOfFile:PokemonRepository.kt$com.example.josue.pokeapp.data.PokemonRepository.kt</ID>
     <ID>NewLineAtEndOfFile:VibrationUtility.kt$com.example.josue.pokeapp.core.VibrationUtility.kt</ID>
   </CurrentIssues>
