@@ -2,7 +2,6 @@
 <SmellBaseline>
   <ManuallySuppressedIssues />
   <CurrentIssues>
-    <ID>MagicNumber:GetPokemonUseCase.kt$GetPokemonUseCase$1010</ID>
     <ID>MagicNumber:MainViewModel.kt$MainViewModel$0.5</ID>
     <ID>MagicNumber:MainViewModel.kt$MainViewModel$300</ID>
     <ID>MagicNumber:MainViewModel.kt$MainViewModel$500L</ID>
