@@ -8,7 +8,5 @@
     <ID>MagicNumber:MainViewModel.kt$MainViewModel$500L</ID>
     <ID>MagicNumber:VibrationUtility.kt$VibrationUtility$26</ID>
     <ID>NewLineAtEndOfFile:ExampleUnitTest.kt$com.example.josue.pokeapp.ExampleUnitTest.kt</ID>
-    <ID>NewLineAtEndOfFile:NetworkModule.kt$com.example.josue.pokeapp.di.NetworkModule.kt</ID>
-    <ID>NewLineAtEndOfFile:PicassoModule.kt$com.example.josue.pokeapp.di.PicassoModule.kt</ID>
   </CurrentIssues>
 </SmellBaseline>
