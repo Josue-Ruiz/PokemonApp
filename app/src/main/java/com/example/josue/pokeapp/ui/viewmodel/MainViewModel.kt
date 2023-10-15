@@ -6,6 +6,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.josue.pokeapp.core.Constants.DELAY_DURATION
+import com.example.josue.pokeapp.core.Constants.LONGEST_DEFINED_DISTANCE
+import com.example.josue.pokeapp.core.Constants.VIBRATION_DURATION
 import com.example.josue.pokeapp.core.LocationManagerLiveData
 import com.example.josue.pokeapp.core.VibrationUtility
 import com.example.josue.pokeapp.domain.GetPokemonUseCase
@@ -46,19 +49,19 @@ class MainViewModel @Inject constructor(
             _dialogState.postValue(true)
             val result = getPokemonUseCase()
             if (result.id != 0) {
-                vibrator?.vibrate(500L)
+                vibrator?.vibrate(VIBRATION_DURATION)
                 _pokemon.postValue(result)
             }
             _dialogState.postValue(false)
         }
     }
 
-    private fun calculateDistances(lat2: Double, lng2: Double) {
+    private fun calculateDistances(newLatObtained: Double, newLongObtained: Double) {
         val results = FloatArray(1)
-        Location.distanceBetween(latitude.value, longitude.value, lat2, lng2, results)
-        if (results[0] >= 0.5) {
-            _latitude.value = lat2
-            _longitude.value = lng2
+        Location.distanceBetween(latitude.value, longitude.value, newLatObtained, newLongObtained, results)
+        if (results[0] >= LONGEST_DEFINED_DISTANCE) {
+            _latitude.value = newLatObtained
+            _longitude.value = newLongObtained
             getRandomPokemon()
         }
     }
@@ -77,9 +80,9 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             _dialogState.postValue(true)
             val result = getPokemonUseCase()
-            delay(300)
+            delay(DELAY_DURATION)
             if (result.id != 0) {
-                vibrator?.vibrate(500L)
+                vibrator?.vibrate(VIBRATION_DURATION)
                 _pokemon.postValue(result)
             }
             _dialogState.postValue(false)

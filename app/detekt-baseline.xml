@@ -1,9 +1,5 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
   <ManuallySuppressedIssues />
-  <CurrentIssues>
-    <ID>MagicNumber:MainViewModel.kt$MainViewModel$0.5</ID>
-    <ID>MagicNumber:MainViewModel.kt$MainViewModel$300</ID>
-    <ID>MagicNumber:MainViewModel.kt$MainViewModel$500L</ID>
-  </CurrentIssues>
+  <CurrentIssues />
 </SmellBaseline>
