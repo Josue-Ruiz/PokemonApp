@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
-  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <ManuallySuppressedIssues />
   <CurrentIssues>
     <ID>MagicNumber:GetPokemonUseCase.kt$GetPokemonUseCase$1010</ID>
     <ID>MagicNumber:MainViewModel.kt$MainViewModel$0.5</ID>
@@ -21,7 +21,6 @@
     <ID>NewLineAtEndOfFile:PokeApp.kt$com.example.josue.pokeapp.ui.PokeApp.kt</ID>
     <ID>NewLineAtEndOfFile:PokemonRepository.kt$com.example.josue.pokeapp.data.PokemonRepository.kt</ID>
     <ID>NewLineAtEndOfFile:VibrationUtility.kt$com.example.josue.pokeapp.core.VibrationUtility.kt</ID>
-    <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
     <ID>WildcardImport:LocationManagerLiveData.kt$import com.google.android.gms.location.*</ID>
   </CurrentIssues>
 </SmellBaseline>
